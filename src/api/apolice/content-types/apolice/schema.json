@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apolices",
+  "info": {
+    "singularName": "apolice",
+    "pluralName": "apolices",
+    "displayName": "Apolice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "seguradora": {
+      "type": "string"
+    },
+    "data_inicio": {
+      "type": "date"
+    },
+    "documento": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "apolices"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "premio": {
+      "type": "decimal"
+    },
+    "data_renovacao": {
+      "type": "date"
+    },
+    "coberturas": {
+      "type": "text"
+    },
+    "sinistro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sinistro.sinistro",
+      "mappedBy": "apolice"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "importar_apolices",
+  "info": {
+    "singularName": "importar-apolice",
+    "pluralName": "importar-apolices",
+    "displayName": "importar apolices"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seguradora": {
+      "type": "string",
+      "required": true
+    },
+    "numero_apolice": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "importar_apolices"
+    },
+    "minuta_assinada": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "comprovativo": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
