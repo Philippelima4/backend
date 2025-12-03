@@ -23,7 +23,7 @@ module.exports = ({ env }) => ({
   // === ESTE É O NOVO CÓDIGO ===
   app: {
     // Isto diz ao Strapi para usar a variável APP_KEYS que definiste no Render
-    keys: env.array('APP_KEYS', ['testKey1', 'testKey2']),
+    keys: env.array('APP_KEYS', ['keyAsupersegura,keyBsupersegura']),
   },
   // ============================
 });
