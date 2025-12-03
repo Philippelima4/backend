@@ -26,4 +26,8 @@ module.exports = ({ env }) => ({
     keys: env.array('APP_KEYS', ['keyAsupersegura,keyBsupersegura']),
   },
   // ============================
+  app: {
+    // Isto diz ao Strapi para usar a variável APP_KEYS que definiste no Render
+    keys: env.array('JWT_SECRET', ['keyAsupersegura,minha_admin_secret23423342']),
+  },
 });
