@@ -6,11 +6,11 @@ export default ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        host: env('DATABASE_HOST','dpg-d4o85gu3jp1c73f8ucug-a'),
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'wallet_db_dyma'),
+        user: env('DATABASE_USERNAME', 'wallet_db_dyma_user'),
+        password: env('DATABASE_PASSWORD', 'FwJ44IS426WWePeqjTnYXEJNHq5n4S9U'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
@@ -23,13 +23,12 @@ export default ({ env }) => {
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
     postgres: {
-      connection: {
-        connectionString: env('DATABASE_URL'),
-        host: env('DATABASE_HOST', 'localhost'),
+     connection: {
+        host: env('DATABASE_HOST','dpg-d4o85gu3jp1c73f8ucug-a'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        database: env('DATABASE_NAME', 'wallet_db_dyma'),
+        user: env('DATABASE_USERNAME', 'wallet_db_dyma_user'),
+        password: env('DATABASE_PASSWORD', 'FwJ44IS426WWePeqjTnYXEJNHq5n4S9U'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
